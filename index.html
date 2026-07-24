@@ -2246,7 +2246,8 @@
       const em = document.getElementById('fEmail').value;
       const s = document.getElementById('fSub').value;
       const m = document.getElementById('fMsg').value;
-      window.location.href = `mailto:bhu1patil421@gmail.com?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(`Name: ${n}\nEmail: ${em}\n\n${m}`)}`;
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=bhu1patil421@gmail.com&su=${encodeURIComponent(s)}&body=${encodeURIComponent(`Name: ${n}\nEmail: ${em}\n\n${m}`)}`;
+      window.open(gmailLink, '_blank');
       const f = document.getElementById('fFeedback');
       f.textContent = '✓ Opening your email client…';
       f.style.display = 'block';
